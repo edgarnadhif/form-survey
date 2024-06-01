@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Formulir Survei Pengguna</h1>
+    <p id="description">
+      Silakan isi formulir di bawah ini untuk berpartisipasi dalam survei kami..
+    </p>
+
+    <form id="survey-form">
+      <label for="name" id="name-label">Nama:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Masukan nama anda"
+        required
+      />
+
+      <label for="email" id="email-label">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Masukan email anda"
+        required
+      />
+
+      <label for="number" id="number-label">Umur:</label>
+      <input
+        type="number"
+        id="number"
+        name="age"
+        placeholder="Masukan umur anda"
+        min="18"
+        max="100"
+        required
+      />
+
+      <label for="dropdown">Pilih pekerjaan Anda:</label>
+      <select id="dropdown" name="occupation" required>
+        <option value="" disabled selected>Pilih beberapa opsi</option>
+        <option value="student">Student</option>
+        <option value="employee">Employee</option>
+        <option value="self-employed">Self-employed</option>
+        <option value="unemployed">Unemployed</option>
+      </select>
+
+      <fieldset>
+        <legend>Pilih Jenis kelamin:</legend>
+        <label
+          ><input type="radio" name="gender" value="male" /> Laki-laki</label
+        >
+        <label
+          ><input type="radio" name="gender" value="female" /> Perempuan</label
+        >
+      </fieldset>
+
+      <fieldset>
+        <legend>Pilih hobi Anda:</legend>
+        <label
+          ><input type="checkbox" name="hobby" value="reading" /> Membaca</label
+        >
+        <label
+          ><input type="checkbox" name="hobby" value="sports" /> Olahraga</label
+        >
+        <label
+          ><input type="checkbox" name="hobby" value="music" /> Musik</label
+        >
+        <input
+          type="text"
+          id="another-hobies"
+          name="hobies"
+          placeholder="Lainnya"
+          min="18"
+          max="100"
+          required
+        />
+      </fieldset>
+
+      <label for="comments">Tambahkan komentar :</label>
+      <textarea
+        id="comments"
+        name="comments"
+        placeholder="Masukan Komentar"
+      ></textarea>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
